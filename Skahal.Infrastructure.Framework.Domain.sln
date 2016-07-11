@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skahal.Infrastructure.Framework.Domain", "Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj", "{96D5AFA1-6E1D-43F2-9E2B-5CE55F85131C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skahal.Infrastructure.Framework.Domain.UnitTests", "Skahal.Infrastructure.Framework.Domain.UnitTests\Skahal.Infrastructure.Framework.Domain.UnitTests.csproj", "{ED1FDE0B-6608-4282-9C44-C7707F93410D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96D5AFA1-6E1D-43F2-9E2B-5CE55F85131C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D5AFA1-6E1D-43F2-9E2B-5CE55F85131C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D5AFA1-6E1D-43F2-9E2B-5CE55F85131C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D5AFA1-6E1D-43F2-9E2B-5CE55F85131C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1FDE0B-6608-4282-9C44-C7707F93410D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1FDE0B-6608-4282-9C44-C7707F93410D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1FDE0B-6608-4282-9C44-C7707F93410D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1FDE0B-6608-4282-9C44-C7707F93410D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

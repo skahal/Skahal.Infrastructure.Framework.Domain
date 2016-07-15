@@ -20,14 +20,11 @@ before_build:
 
 build:
   project: src\Skahal.Infrastructure.Framework.Domain.sln
-  verbosity: minimal 
+  verbosity: minimal
 
 after_build:
 - cmd: >-
-    "C:\Program Files (x86)\Microsoft Fxcop 10.0\FxCopCmd.exe" /project:.\src\Skahal.Infrastructure.Framework.Domain.FxCop /out:.\tools\fxcop-report.xml
-
-    .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b FxCop -c ".\tools\fxcop-report.xml" -a %GITHUB_REPO_TOKEN%
-
+    "
     .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\Skahal.Infrastructure.Framework.Domain.sln --styleCopSettingsFile .\src\Settings.StyleCop -of .\tools\stylecop-report.xml --ignoreFilePattern .+Test\.cs
 
     .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b StyleCop -c ".\tools\stylecop-report.violations.xml" -a %GITHUB_REPO_TOKEN%

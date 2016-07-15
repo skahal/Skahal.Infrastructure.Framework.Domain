@@ -19,7 +19,7 @@ before_build:
 - cmd: nuget restore .\src\Skahal.Infrastructure.Framework.Domain.sln
 
 build:
-  project: src\kahal.Infrastructure.Framework.Domain.sln
+  project: src\Skahal.Infrastructure.Framework.Domain.sln
   verbosity: minimal
 
 after_build:

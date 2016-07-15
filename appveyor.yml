@@ -6,6 +6,8 @@ environment:
     secure: Ci5HZS2BTvXqrnjdVArVkPKzSdWdEh+qymL9nSbGtxlyVLjWR6mAz4S0dUriq6Ae
   GITHUB_REPO_TOKEN:
     secure: BmRzHKyKfKWWl5p1Q7NYWw4gpheBmyoVdeZOz+NY66TxWn77xgkwZ9rgYWySCwJV
+
+install:
 - cmd: choco install resharper-clt.portable
 - cmd: choco install fxcop
 

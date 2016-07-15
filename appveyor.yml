@@ -33,3 +33,13 @@ after_build:
 test_script:
 - ps: >-
     .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""src\Skahal.Infrastructure.Framework.Domain.UnitTests\bin\$env:CONFIGURATION\Skahal.Infrastructure.Framework.Domain.UnitTests.dll" /noshadow" -filter:"+[Skahal.Infrastructure.Framework.Domain]*" -output:opencoverCoverage.xml
+
+artifacts:
+  - path: .\tools\fxcop-report.xml
+    name: FxCop-Report
+  - path: .\tools\stylecop-report.xml
+    name: StyleCop-Report
+  - path: .\tools\dupFinder-report.xml
+    name: DupFinder-report
+  - path: .\src\nuget\*.nupkg
+    name: NuGet packages

@@ -22,7 +22,7 @@
  </ProjectOptions>
  <Targets>
   <AssemblyReferenceDirectories>
-   <Directory>$(ProjectDir)/GeneticSharp.Runner/bin/Debug/</Directory>
+   <Directory>$(ProjectDir)/Skahal.Infrastructure.Framework.Domain/bin/Debug/</Directory>
   </AssemblyReferenceDirectories>
   <Target Name="$(ProjectDir)/Skahal.Infrastructure.Framework.Domain/bin/Debug/Skahal.Infrastructure.Framework.Domain.dll" Analyze="True" AnalyzeAllChildren="True" />
  </Targets>

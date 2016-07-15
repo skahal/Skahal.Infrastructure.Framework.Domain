@@ -28,8 +28,8 @@ after_build:
 
     C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinder-Report.xml /show-text /exclude=**\*Test.cs;**\*.feature.cs;**\BundleConfig.cs .\src\Skahal.Infrastructure.Framework.Domain.sln
 
-    mkdir .\src\nuget
-    nuget pack .\src\Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj -IncludeReferencedProjects -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory .\src\nuget
+    mkdir .\nuget
+    nuget pack .\src\Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj -IncludeReferencedProjects -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory .\nuget
 test_script:
 - ps: >-
     .\src\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""src\Skahal.Infrastructure.Framework.Domain.UnitTests\bin\$env:CONFIGURATION\Skahal.Infrastructure.Framework.Domain.UnitTests.dll" /noshadow" -filter:"+[Skahal.Infrastructure.Framework.Domain]*" -output:opencoverCoverage.xml
@@ -41,5 +41,5 @@ artifacts:
     name: StyleCop-Report
   - path: .\tools\dupFinder-report.xml
     name: DupFinder-report
-  - path: .\src\nuget\*.nupkg
+  - path: .\nuget\*.nupkg
     name: NuGet packages

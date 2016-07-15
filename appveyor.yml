@@ -29,6 +29,7 @@ after_build:
     C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinder-Report.xml /show-text /exclude=**\*Test.cs;**\*.feature.cs;**\BundleConfig.cs .\src\Skahal.Infrastructure.Framework.Domain.sln
 
     mkdir .\nuget
+    
     nuget pack .\src\Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj -IncludeReferencedProjects -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory .\nuget
 test_script:
 - ps: >-

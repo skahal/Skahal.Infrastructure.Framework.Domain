@@ -20,7 +20,7 @@ before_build:
 
 build:
   project: src\Skahal.Infrastructure.Framework.Domain.sln
-  verbosity: minimal
+  verbosity: minimal 
 
 after_build:
 - cmd: >-

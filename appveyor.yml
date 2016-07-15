@@ -24,13 +24,11 @@ build:
 
 after_build:
 - cmd: >-
-    ".\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\Skahal.Infrastructure.Framework.Domain.sln --styleCopSettingsFile .\src\Settings.StyleCop -of .\tools\stylecop-report.xml --ignoreFilePattern .+Test\.cs
-
+    "C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinder-Report.xml /show-text /exclude=**\*Test.cs;**\*.feature.cs;**\BundleConfig.cs .\src\Skahal.Infrastructure.Framework.Domain.sln
+    .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b DupFinder -c .\tools\dupFinder-Report.xml -a %GITHUB_REPO_TOKEN%
+    .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\Skahal.Infrastructure.Framework.Domain.sln --styleCopSettingsFile .\src\Settings.StyleCop -of .\tools\stylecop-report.xml --ignoreFilePattern .+Test\.cs
     .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b StyleCop -c ".\tools\stylecop-report.violations.xml" -a %GITHUB_REPO_TOKEN%
 
-    C:\ProgramData\chocolatey\lib\resharper-clt.portable\tools\dupfinder.exe /output=.\tools\dupFinder-Report.xml /show-text /exclude=**\*Test.cs;**\*.feature.cs;**\BundleConfig.cs .\src\Skahal.Infrastructure.Framework.Domain.sln
-
-    .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b DupFinder -c .\tools\dupFinder-Report.xml -a %GITHUB_REPO_TOKEN%
     mkdir .\src\nuget
     nuget pack .\src\Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj -IncludeReferencedProjects -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory .\src\nuget
 test_script:

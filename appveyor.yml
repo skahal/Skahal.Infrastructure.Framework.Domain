@@ -24,8 +24,7 @@ build:
 
 after_build:
 - cmd: >-
-    "
-    .\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\Skahal.Infrastructure.Framework.Domain.sln --styleCopSettingsFile .\src\Settings.StyleCop -of .\tools\stylecop-report.xml --ignoreFilePattern .+Test\.cs
+    ".\tools\StyleCopCmd\Net.SF.StyleCopCmd.Console\StyleCopCmd.exe -sf .\src\Skahal.Infrastructure.Framework.Domain.sln --styleCopSettingsFile .\src\Settings.StyleCop -of .\tools\stylecop-report.xml --ignoreFilePattern .+Test\.cs
 
     .\tools\BadgesSharpCmd.exe -o giusepecasagrande -r Skahal.Infrastructure.Framework.Domain -b StyleCop -c ".\tools\stylecop-report.violations.xml" -a %GITHUB_REPO_TOKEN%
 

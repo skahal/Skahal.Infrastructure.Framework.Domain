@@ -33,7 +33,7 @@ after_build:
     nuget pack .\src\Skahal.Infrastructure.Framework.Domain\Skahal.Infrastructure.Framework.Domain.csproj -IncludeReferencedProjects -Version %APPVEYOR_BUILD_VERSION% -OutputDirectory .\nuget
 test_script:
 - ps: >-
-    .\src\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:nunit3-console -register:user "-targetargs:""src\Skahal.Infrastructure.Framework.Domain.UnitTests\bin\$env:CONFIGURATION\Skahal.Infrastructure.Framework.Domain.UnitTests.dll"" /noshadow" -filter:"+[Skahal.Infrastructure.Framework.Domain]*" -output:opencoverCoverage.xml
+    .\src\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:nunit3-console.exe -register:user "-targetargs:""src\Skahal.Infrastructure.Framework.Domain.UnitTests\bin\$env:CONFIGURATION\Skahal.Infrastructure.Framework.Domain.UnitTests.dll"" /noshadow" -filter:"+[Skahal.Infrastructure.Framework.Domain]*" -output:opencoverCoverage.xml
 
 artifacts:
   - path: .\tools\fxcop-report.xml

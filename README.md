@@ -8,7 +8,9 @@
 ####Release
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/skahal/Skahal.Infrastructure.Framework.Domain/master/LICENSE)
 [![Nuget](https://img.shields.io/nuget/v/Skahal.Infrastructure.Framework.Domain.svg)](https://www.nuget.org/packages/Skahal.Infrastructure.Framework.Domain/)
-[![Nuget](https://img.shields.io/nuget/dt/https://www.nuget.org/packages/Skahal.Infrastructure.Framework.Domain/.svg)](https://www.nuget.org/packages/https://www.nuget.org/packages/Skahal.Infrastructure.Framework.Domain/)
+[![Nuget](https://img.shields.io/nuget/dt/Skahal.Infrastructure.Framework.Domain.svg)](https://www.nuget.org/packages/Skahal.Infrastructure.Framework.Domain/)
+
+[![Nuget](https://img.shields.io/nuget/dt/GeneticSharp.svg)](https://www.nuget.org/packages/GeneticSharp/)
 
 
 # Skahal.Infrastructure.Framework.Domain

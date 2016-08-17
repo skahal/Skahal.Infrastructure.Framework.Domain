@@ -34,6 +34,8 @@ after_build:
 test_script:
 - ps: >-
     .\src\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:nunit3-console.exe -targetargs:"src\Skahal.Infrastructure.Framework.Domain.UnitTests\bin\Debug\Skahal.Infrastructure.Framework.Domain.UnitTests.dll" -filter:"+[Skahal.Infrastructure.Framework.Domain]*" -output:opencoverCoverage.xml
+    .\src\packages\coveralls.net.0.7.0\tools\csmacnz.Coveralls.exe --opencover -i opencoverCoverage.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
+
 
 artifacts:
   - path: .\tools\fxcop-report.xml

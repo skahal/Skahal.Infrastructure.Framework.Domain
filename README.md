@@ -1,5 +1,5 @@
 ####Build
-[![Build status](https://ci.appveyor.com/api/projects/status/8nq0s700s41pnd1i?svg=true)(https://ci.appveyor.com/project/GiusepeCasagrande/skahal-infrastructure-framework-domain)
+[![Build status](https://ci.appveyor.com/api/projects/status/8nq0s700s41pnd1i?svg=true)](https://ci.appveyor.com/project/GiusepeCasagrande/skahal-infrastructure-framework-domain)
 
 ####Code quality
 [![Coverage Status](https://coveralls.io/repos/github/skahal/Skahal.Infrastructure.Framework.Domain/badge.svg?branch=master)](https://coveralls.io/github/skahal/Skahal.Infrastructure.Framework.Domain?branch=master)

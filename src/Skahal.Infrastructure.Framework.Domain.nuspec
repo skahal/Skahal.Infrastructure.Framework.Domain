@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Skahal.Infrastructure.Framework.Domain</id>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <authors>Skahal</authors>
     <owners>g1acomell1,giusepecasagrande</owners>
     <licenseUrl>https://github.com/skahal/Skahal.Infrastructure.Framework.Domain/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/skahal/Skahal.Infrastructure.Framework.Domain</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Skahal's infrastructure framework used in games and apps.</description>
-    <releaseNotes>Split the Skahal.Infrastructure.Framework.Domain in several smaller parts.</releaseNotes>
+    <releaseNotes>Added support to UWP by changing the PCL to profile7.</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>ddd unitOfWork framework repository entity</tags>
   </metadata>
